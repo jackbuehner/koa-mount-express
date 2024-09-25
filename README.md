@@ -9,11 +9,28 @@ This is useful for mounting an external Express app within your own Koa app.
 npm install koa-mount-express
 ```
 
+## Usage
+
+```js
+import express from "express";
+import Koa from "koa";
+import mountExpress from "koa-mount-express";
+
+const app = new Koa();
+const expressApp = express();
+
+app.use(mountExpress("/express", expressApp));
+
+app.listen(3000);
+```
+
 ## Example
 
 ```js
 import express from "express";
 import Koa from "koa";
+import mountExpress from "koa-mount-express";
+
 const app = new Koa();
 const expressApp = express();
 

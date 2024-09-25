@@ -20,7 +20,7 @@
  * @param {string} path
  * @param {import('express').Express} app
  */
-function mountExpress(path, app) {
+export default function mountExpress(path, app) {
   /**
    * @param {import('koa').Context} ctx
    * @param {Function} next
